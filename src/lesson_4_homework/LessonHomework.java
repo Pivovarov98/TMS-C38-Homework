@@ -116,11 +116,11 @@ public class LessonHomework {
         System.out.println("The numbers are in ascending order");
     }
 
-    //Task 7* Немного оптимизировал задачу, если добавлять нужно не 1 как по заданию, а больше :)
+    //Task 7* Немного усложнил задачу, если добавлять нужно не 1 как по заданию, а больше :)
     public static void addingNumberToArray() {
         int[] arr = new int[]{9, 9, 9}; //{9, 9, 9} и numberToAdd = 102 результат {1, 1, 0, 1}
         int numberToAdd = 102;
-        int remainder;
+        int variable;
 
         if (arr[0] == 0) {
             System.out.println("Array can't start with 0");
@@ -134,11 +134,11 @@ public class LessonHomework {
                 break;
             }
 
-            remainder = numberToAdd;
+            variable = numberToAdd;
             numberToAdd = (arr[i] + numberToAdd) / 10;
-            arr[i] = (arr[i] + remainder) % 10;
+            arr[i] = (arr[i] + variable) % 10;
 
-            if (i == 0 && remainder > 0) {
+            if (i == 0 && numberToAdd > 0) {
 
                 int[] newArr = new int[arr.length + 1];
                 newArr[0] = numberToAdd;
