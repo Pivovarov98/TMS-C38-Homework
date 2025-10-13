@@ -51,7 +51,7 @@ public class LessonHomework {
         System.out.println("Please enter a positive integer ");
 
         if (!scan.hasNextInt()) {
-            System.out.println("You entered a non-integer number");
+            System.out.println("You have entered a non-integer number");
             return;
         }
         int sum = 0;

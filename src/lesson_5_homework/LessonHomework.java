@@ -7,9 +7,9 @@ public class LessonHomework {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         process2DArray();
-        System.out.println("--------------------------------------");
+        System.out.println("---------------------------------");
         chessBoard();
-        System.out.println("--------------------------------------");
+        System.out.println("---------------------------------");
         System.out.println("Enter number of rows: ");
         int row = scan.nextInt();
         System.out.println("Enter number of columns: ");
@@ -79,7 +79,7 @@ public class LessonHomework {
 
 
     //Методы для вывода массивов
-    public static void print2DArray(int arr[][]){
+    public static void print2DArray(int[][] arr){
         int maxNumLength = String.valueOf(arr.length * arr[0].length).length() + 1;
 
         for (int i = 0; i < arr.length ; i++){
@@ -90,7 +90,7 @@ public class LessonHomework {
         }
     }
 
-    public static void print2DArrayStr(String arr[][]){
+    public static void print2DArrayStr(String[][] arr){
         for (int i = 0; i < arr.length ; i++){
             for (int j = 0; j < arr[i].length; j++){
                 System.out.print(arr[i][j] + " ");
