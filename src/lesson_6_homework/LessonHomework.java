@@ -6,8 +6,6 @@ public class LessonHomework {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
-        // illegal digit in an octal literal 08 09
-
         CreditCard card1 = new CreditCard();
         card1.cardNumber = "1234567891011121";
         card1.accountNumbe = "BY3005487381647725";
