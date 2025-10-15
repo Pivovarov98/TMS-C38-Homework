@@ -33,13 +33,17 @@ public class LessonHomework {
         card3.amount = 738.98;
         card3.currency = "BYN";
 
+        card1.printCardData();
+        card2.printCardData();
+        card3.printCardData();
+
         card1.depositFunds(300);
         card2.depositFunds(125);
         card3.withdrawalFunds(220);
 
-        card1.printCardData();
-        card2.printCardData();
-        card3.printCardData();
+        card1.printAmount();
+        card2.printAmount();
+        card3.printAmount();
 
         ATM atm = new ATM();
 
