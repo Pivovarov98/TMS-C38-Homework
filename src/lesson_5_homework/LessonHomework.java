@@ -82,18 +82,18 @@ public class LessonHomework {
     public static void print2DArray(int[][] arr){
         int maxNumLength = String.valueOf(arr.length * arr[0].length).length() + 1;
 
-        for (int i = 0; i < arr.length ; i++){
-            for (int j = 0; j < arr[i].length; j++){
-                System.out.printf("%" + maxNumLength + "d", arr[i][j]);
+        for (int[] ints : arr) {
+            for (int anInt : ints) {
+                System.out.printf("%" + maxNumLength + "d", anInt);
             }
             System.out.println();
         }
     }
 
     public static void print2DArrayStr(String[][] arr){
-        for (int i = 0; i < arr.length ; i++){
-            for (int j = 0; j < arr[i].length; j++){
-                System.out.print(arr[i][j] + " ");
+        for (String[] strings : arr) {
+            for (String string : strings) {
+                System.out.print(string + " ");
             }
             System.out.println();
         }

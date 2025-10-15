@@ -28,8 +28,8 @@ public class LessonHomework {
     //Task 1
     public static void outputOfElements(int[] array) {
         System.out.print("Output of elements: ");
-        for (int i = 0; i < array.length; i++) {
-            System.out.print(array[i] + " ");
+        for (int i : array) {
+            System.out.print(i + " ");
         }
 
         System.out.print("\nReverse output of elements: ");
@@ -67,8 +67,8 @@ public class LessonHomework {
     public static void findZeroElements(int[] array) {
         int counter = 0;
 
-        for (int i = 0; i < array.length; i++) {
-            if (array[i] == 0) counter++;
+        for (int i : array) {
+            if (i == 0) counter++;
         }
         System.out.println(counter > 0 ? "The number of zeros in your array: " + counter : "There are no zeros in your array");
     }
@@ -142,10 +142,7 @@ public class LessonHomework {
 
                 int[] newArr = new int[arr.length + 1];
                 newArr[0] = numberToAdd;
-
-                for (int k = 1; k < newArr.length; k++) {
-                    newArr[k] = arr[k - 1];
-                }
+                System.arraycopy(arr, 0, newArr, 1, newArr.length - 1);
                 System.out.println(Arrays.toString(newArr));
                 return;
             }
