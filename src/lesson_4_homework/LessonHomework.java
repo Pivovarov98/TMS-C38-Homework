@@ -6,10 +6,9 @@ import java.util.Scanner;
 
 public class LessonHomework {
     public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
         Random rng = new Random();
         System.out.println("Enter array length ");
-        int len = scan.nextInt();
+        int len = input().nextInt();
         int[] arr = new int[len];
 
         for (int i = 0; i < arr.length; i++) {
@@ -75,10 +74,9 @@ public class LessonHomework {
 
     //Task 5
     public static void reverseArray() {
-        Scanner scan = new Scanner(System.in);
         Random rng = new Random();
         System.out.println("Enter array length for reverse ");
-        int len = scan.nextInt();
+        int len = input().nextInt();
         int[] array = new int[len];
 
         for (int i = 0; i < array.length; i++) {
@@ -97,14 +95,13 @@ public class LessonHomework {
 
     //Task 6
     public static void isArrayAscendingSequence() {
-        Scanner scan = new Scanner(System.in);
         System.out.println("Enter array length for ascending sequence chek ");
-        int len = scan.nextInt();
+        int len = input().nextInt();
         int[] array = new int[len];
         System.out.println("Enter number for array: ");
 
         for (int i = 0; i < array.length; i++) {
-            array[i] = scan.nextInt();
+            array[i] = input().nextInt();
         }
 
         for (int i = 0; i < array.length - 1; i++) {
@@ -148,5 +145,9 @@ public class LessonHomework {
             }
         }
         System.out.println(Arrays.toString(arr));
+    }
+
+    public static Scanner input(){
+        return new Scanner(System.in);
     }
 }

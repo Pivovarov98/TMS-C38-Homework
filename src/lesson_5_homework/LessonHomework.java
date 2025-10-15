@@ -5,21 +5,19 @@ import java.util.Scanner;
 
 public class LessonHomework {
     public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
         process2DArray();
         System.out.println("---------------------------------");
         chessBoard();
         System.out.println("---------------------------------");
-        System.out.println("Enter number of rows: ");
-        int row = scan.nextInt();
-        System.out.println("Enter number of columns: ");
-        int column = scan.nextInt();
+        System.out.print("Enter number of rows: ");
+        int row = input().nextInt();
+        System.out.print("Enter number of columns: ");
+        int column = input().nextInt();
         snakePrintArray(row, column);
     }
 
     //Task 1
     public static void process2DArray(){
-        Scanner scan = new Scanner(System.in);
         Random rng = new Random();
         int[][] numbers = new int[3][5];
         int sumOfArrayNumbers = 0;
@@ -34,7 +32,7 @@ public class LessonHomework {
 
         for (int i = 0; i < numbers.length ; i++){
             for (int j = 0; j < numbers[i].length; j++){
-                numbers[i][j] += scan.nextInt();
+                numbers[i][j] += input().nextInt();
                 sumOfArrayNumbers += numbers[i][j];
             }
         }
@@ -97,5 +95,9 @@ public class LessonHomework {
             }
             System.out.println();
         }
+    }
+
+    public static Scanner input(){
+        return new Scanner(System.in);
     }
 }

@@ -13,17 +13,15 @@ public class LessonHomework {
 
     //Task 1
     public static void evenOrOdd() {
-        Scanner scan = new Scanner(System.in);
         System.out.print("Enter your number ");
-        int num = scan.nextInt();
+        int num = input().nextInt();
         System.out.println(num % 2 == 0 ? "Your number is even" : "Your number is odd");
     }
 
     //Task 2
     public static void temperature() {
-        Scanner scan = new Scanner(System.in);
         System.out.print("Enter temperature outside ");
-        int temp = scan.nextInt();
+        int temp = input().nextInt();
         System.out.println(temp >= -5 ? "It's warm outside" : temp >= -20 ? "It's normal outside" : "It's cold outside");
     }
 
@@ -47,15 +45,14 @@ public class LessonHomework {
 
     //Task 5*
     public static void sumDigits() {
-        Scanner scan = new Scanner(System.in);
         System.out.println("Please enter a positive integer ");
 
-        if (!scan.hasNextInt()) {
+        if (!input().hasNextInt()) {
             System.out.println("You have entered a non-integer number");
             return;
         }
         int sum = 0;
-        int num = scan.nextInt();
+        int num = input().nextInt();
 
         if (num < 1) {
             System.out.println("Your number is negative or 0");
@@ -66,5 +63,9 @@ public class LessonHomework {
             sum += i;
         }
         System.out.println("Sum of numbers is " + sum);
+    }
+
+    public static Scanner input(){
+        return new Scanner(System.in);
     }
 }
