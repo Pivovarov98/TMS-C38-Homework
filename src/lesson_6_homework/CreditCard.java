@@ -7,7 +7,7 @@ public class CreditCard {
     String expirationDate;
     int csvCode;
     double amount;
-    String accountNumbe;
+    String accountNumber;
     String currency;
     String cardholderDetails;
 

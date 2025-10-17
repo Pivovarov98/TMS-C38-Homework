@@ -8,7 +8,7 @@ public class LessonHomework {
 
         CreditCard card1 = new CreditCard();
         card1.cardNumber = "1234567891011121";
-        card1.accountNumbe = "BY3005487381647725";
+        card1.accountNumber = "BY3005487381647725";
         card1.expirationDate = "08/29";
         card1.csvCode = 133;
         card1.cardholderDetails = "Ivan Ivanov";
@@ -17,7 +17,7 @@ public class LessonHomework {
 
         CreditCard card2 = new CreditCard();
         card2.cardNumber = "1578846235981486";
-        card2.accountNumbe = "BY3005484365978123";
+        card2.accountNumber = "BY3005484365978123";
         card2.expirationDate = "05/27";
         card2.csvCode = 259;
         card2.cardholderDetails = "Petr Petrov";
@@ -26,7 +26,7 @@ public class LessonHomework {
 
         CreditCard card3 = new CreditCard();
         card3.cardNumber = "2587456912593684";
-        card3.accountNumbe = "BY3005485987624158";
+        card3.accountNumber = "BY3005485987624158";
         card3.expirationDate = "11/31";
         card3.csvCode = 983;
         card3.cardholderDetails = "Victor Victorovich";
