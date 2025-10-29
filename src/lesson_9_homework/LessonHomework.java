@@ -27,16 +27,16 @@ public class LessonHomework {
 
         //Task 3*
         Animal cat = new Animal("Cat", 4);
+        Animal coppyCat = null;
 
         try {
-            Animal coppyCat = (Animal) cat.clone();
-
-            cat.printInfo();
-            coppyCat.printInfo();
-
-            System.out.println(cat == coppyCat);
+            coppyCat = cat.clone();
         } catch (CloneNotSupportedException e) {
-            e.printStackTrace();
+            System.out.println(e);
         }
+
+        cat.printInfo();
+        coppyCat.printInfo();
+        System.out.println(cat == coppyCat);
     }
 }

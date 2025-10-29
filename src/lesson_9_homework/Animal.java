@@ -14,7 +14,7 @@ public class Animal implements Cloneable {
     }
 
     @Override
-    protected Object clone() throws CloneNotSupportedException {
-        return super.clone();
+    protected Animal clone() throws CloneNotSupportedException {
+        return (Animal) super.clone();
     }
 }
