@@ -32,7 +32,8 @@ public class LessonHomework {
         System.out.println("What type of cloning do you want?" + "\n1 - cloning | 2 - deep cloning");
         int choiceCloningType;
         int choiceUser;
-        User clonUser;
+        User clonUser = null;
+        User original = null;
 
         while (true) {
             choiceCloningType = new Scanner(System.in).nextInt();
@@ -45,33 +46,27 @@ public class LessonHomework {
         }
 
         while (true) {
-            boolean isCorrect = false;
             System.out.println("Enter user ID for cloning");
             choiceUser = new Scanner(System.in).nextInt();
 
             for (User user : users) {
                 if (user.ID == choiceUser) {
-                    isCorrect = true;
+                    original = user;
+                    if (choiceCloningType == 1) {
+                        clonUser = user.clone();
+                    } else {
+                        clonUser = user.deepClone();
+                    }
                     break;
                 }
             }
-
-            if (!isCorrect) {
-                System.out.println("There is no user under this ID yet");
-                continue;
-            }
-            break;
+            if(clonUser != null) break;
+            System.out.println("There is no user under this ID yet");
         }
 
-        if (choiceCloningType == 1) {
-            clonUser = users[choiceUser - 1].clone();
-        } else {
-            clonUser = users[choiceUser - 1].deepClone();
-        }
-
-        userInfoChek(users[choiceUser - 1], clonUser);
+        userInfoChek(original, clonUser);
         clonUser.setNewAddress("France", "London", "Meero St");
-        userInfoChek(users[choiceUser - 1], clonUser);
+        userInfoChek(original, clonUser);
 
     }
 
