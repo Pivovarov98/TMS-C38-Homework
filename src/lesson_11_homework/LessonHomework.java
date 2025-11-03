@@ -13,11 +13,11 @@ public class LessonHomework {
         }
         System.out.println("-".repeat(50));
 
-//        shortestAndLongestString(str);
-//        ascendingOrderString(str);
-//        shorterLengthThanAvg(str);
-//        differentSymbolsWord(str);
-//        doubleLetter();
+        shortestAndLongestString(str);
+        ascendingOrderString(str);
+        shorterLengthThanAvg(str);
+        differentSymbolsWord(str);
+        doubleLetter();
         palindromeWord();
 
     }
