@@ -116,17 +116,17 @@ public class LessonHomework {
     }
 
     //Task 6*
-    static void palindromeWord(){
+    static void palindromeWord() {
         System.out.println("Enter the string: ");
         String[] str = input().nextLine().split(" |, ");
         System.out.println("Enter the number of word to check: ");
         int num = input().nextInt() - 1;
 
-        if(num > str.length) System.out.println("There are less words in the string");
+        if (num > str.length) System.out.println("There are less words in the string");
 
         String sb = new StringBuilder(str[num]).reverse().toString();
 
-        if(str[num].equalsIgnoreCase(sb)){
+        if (str[num].equalsIgnoreCase(sb)) {
             System.out.println("This word is a palindrome: " + str[num]);
         } else {
             System.out.println("This word is not a palindrome: " + str[num]);
