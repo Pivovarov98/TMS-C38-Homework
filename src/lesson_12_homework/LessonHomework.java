@@ -19,7 +19,7 @@ public class LessonHomework {
 
     //Task 1
     public static void printAbbreviation(String abbreviation) {
-        Pattern pattern = Pattern.compile("\\b[a-z]{2,6}\\b");
+        Pattern pattern = Pattern.compile("\\b(\\p{Lu}{2,6})\\b", Pattern.UNICODE_CHARACTER_CLASS);
         Matcher matcher = pattern.matcher(abbreviation);
 
         while (matcher.find()) {
