@@ -7,7 +7,8 @@ public class User {
     String password;
     String confirmPassword;
 
-    public User(String login, String password, String confirmPassword) throws Exception {
+    public User(String login, String password, String confirmPassword)
+            throws WrongLoginException, WrongPasswordException{
         loginException(login);
         passwordException(password, confirmPassword);
         this.login = login;

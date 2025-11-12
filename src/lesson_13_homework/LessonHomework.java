@@ -2,7 +2,7 @@ package lesson_13_homework;
 
 public class LessonHomework {
 
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) {
         //Task 1
         try {
             User user = new User("kiss", "2fdg", "2fdg");
