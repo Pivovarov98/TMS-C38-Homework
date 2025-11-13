@@ -4,12 +4,9 @@ public class LessonHomework {
 
     public static void main(String[] args) {
         //Task 1
-        try {
-            User user = new User("kiss", "2fdg", "2fdg");
-            System.out.println("User registered successfully");
-        } catch (WrongLoginException | WrongPasswordException e) {
-            System.out.println("Error: " + e.getMessage());
-        }
+        User user = User.createUser("kiss", "2fdg", "2fdg");
+        if (user != null) System.out.println(user);
+        System.out.println("-".repeat(50));
 
         //Task 2*
         try {

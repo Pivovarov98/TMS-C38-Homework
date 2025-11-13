@@ -8,12 +8,24 @@ public class User {
     String confirmPassword;
 
     public User(String login, String password, String confirmPassword)
-            throws WrongLoginException, WrongPasswordException{
+            throws WrongLoginException, WrongPasswordException {
         loginException(login);
         passwordException(password, confirmPassword);
         this.login = login;
         this.password = password;
         this.confirmPassword = confirmPassword;
+    }
+
+    static User createUser(String login, String password, String confirmPassword) {
+        User user;
+        try {
+            user = new User(login, password, confirmPassword);
+            System.out.println("User registered successfully");
+            return user;
+        } catch (WrongLoginException | WrongPasswordException e) {
+            System.out.println("Error: " + e.getMessage());
+            return null;
+        }
     }
 
     static void loginException(String login) throws WrongLoginException {
@@ -25,5 +37,12 @@ public class User {
         if (!Pattern.matches("^(?=.*\\d)\\S{1,20}$", password)
                 || !password.equals(confirmPassword))
             throw new WrongPasswordException("the password must be less than 20 characters, contain no spaces, include at least one digit, and match");
+    }
+
+    @Override
+    public String toString() {
+        return "User:" +
+                "\n\tLogin: " + login +
+                "\n\tPassword: " + password;
     }
 }
