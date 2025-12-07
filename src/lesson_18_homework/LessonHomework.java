@@ -2,7 +2,6 @@ package lesson_18_homework;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.stream.Stream;
 
 public class LessonHomework {
     public static void main(String[] args) {
@@ -13,7 +12,7 @@ public class LessonHomework {
         streamsFunctions(new ArrayList<>(Arrays.asList(1, 3, 3, 5)));
     }
 
-    static void streamsFunctions(ArrayList<Integer> numbers){
+    static void streamsFunctions(ArrayList<Integer> numbers) {
         System.out.println(numbers.stream().
                 distinct().
                 filter(n -> n % 2 == 0).
