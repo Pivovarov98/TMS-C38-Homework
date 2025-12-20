@@ -43,6 +43,23 @@ public class LessonHomework {
         System.out.println(studentsList);
         System.out.println("-".repeat(50));
         printStudents(studentsList, 3);
+
+        //Task *
+        MyArrayList<String> myList = new MyArrayList<>();
+
+        myList.add("Egor");
+        myList.add("Dasha");
+        myList.add("Riko");
+
+        System.out.println(myList.get(1));
+        System.out.println(myList.contains("Egor"));
+
+        myList.remove(1);
+        System.out.println(myList.contains("Riko"));
+        System.out.println(myList.get(1));
+
+        myList.removeAll();
+        System.out.println(myList.size());
     }
 
     //Task 1
